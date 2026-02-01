@@ -54,9 +54,10 @@ header.site-header {
 
 .header-logo h1 {
   margin: 0 0 4px;
-  font-size: 1.5rem;
-  font-weight: 400;
-  letter-spacing: 0.02em;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
 }
 
 .header-logo .tagline {

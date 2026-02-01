@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>Two Be Wed | Wedding Content Creators</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
@@ -55,14 +58,34 @@
 </section>
 
 <section class="featured">
+  <div class="reel-overlay" id="reelOverlay" aria-hidden="true"></div>
   <div class="featured-header">
     <h2>Featured Work</h2>
-    <a href="gallery.html">View all →</a>
+    <a href="https://www.instagram.com/twobewed.in/reels/" target="_blank">View all on Instagram →</a>
   </div>
   <div class="featured-grid">
-    <a href="gallery.html" class="featured-item"><img src="images/image4.jpeg" alt="Wedding content"></a>
-    <a href="gallery.html" class="featured-item"><img src="images/image5.jpg" alt="Wedding content"></a>
-    <a href="gallery.html" class="featured-item"><img src="images/image6.jpeg" alt="Wedding content"></a>
+    <!-- Replace data-reel-id with your actual Instagram reel IDs (from reel URL: instagram.com/reel/REEL_ID/) -->
+    <div class="featured-item reel-item" data-reel-id="DSSELQfCHsA/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-thumb="images/image4.jpeg">
+      <img src="images/image4.jpeg" alt="Wedding reel">
+      <div class="reel-popup">
+        <button class="reel-close" aria-label="Close">×</button>
+        <iframe src="" loading="lazy" allow="autoplay" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="featured-item reel-item" data-reel-id="DS4qOv4jLf4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-thumb="images/image5.jpg">
+      <img src="images/image5.jpg" alt="Wedding reel">
+      <div class="reel-popup">
+        <button class="reel-close" aria-label="Close">×</button>
+        <iframe src="" loading="lazy" allow="autoplay" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="featured-item reel-item" data-reel-id="DPV772hiQXN/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-thumb="images/image6.jpeg">
+      <img src="images/image6.jpeg" alt="Wedding reel">
+      <div class="reel-popup">
+        <button class="reel-close" aria-label="Close">×</button>
+        <iframe src="" loading="lazy" allow="autoplay" allowfullscreen></iframe>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -128,6 +151,59 @@
 </footer>
 
 <a class="wa" href="https://wa.me/919056042090" target="_blank" aria-label="WhatsApp">💬</a>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.reel-item');
+  var overlay = document.getElementById('reelOverlay');
+
+  function openReel(item) {
+    var popup = item.querySelector('.reel-popup');
+    var iframe = popup.querySelector('iframe');
+    var reelId = item.getAttribute('data-reel-id');
+
+    if (reelId && reelId.indexOf('REEL_ID_') === -1 && !iframe.src) {
+      iframe.src = 'https://www.instagram.com/reel/' + reelId + '/embed/';
+    }
+
+    popup.classList.add('active');
+    overlay.classList.add('active');
+    overlay.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeReel() {
+    items.forEach(function(item) {
+      item.querySelector('.reel-popup').classList.remove('active');
+    });
+    overlay.classList.remove('active');
+    overlay.setAttribute('aria-hidden', 'true');
+  }
+
+  items.forEach(function(item) {
+    var popup = item.querySelector('.reel-popup');
+    var closeBtn = popup.querySelector('.reel-close');
+
+    item.addEventListener('mouseenter', function() {
+      if (window.matchMedia('(hover: hover)').matches) {
+        openReel(item);
+      }
+    });
+
+    item.addEventListener('click', function(e) {
+      if (window.matchMedia('(hover: hover)').matches) return;
+      e.preventDefault();
+      openReel(item);
+    });
+
+    closeBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      closeReel();
+    });
+  });
+
+  overlay.addEventListener('click', closeReel);
+})();
+</script>
 
 </body>
 </html>
