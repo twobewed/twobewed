@@ -2,61 +2,132 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Two Be Wed | Weddings Content Creators</title>
+  <title>Two Be Wed | Wedding Content Creators</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body { margin:0; font-family: Arial, sans-serif; }
-    header { padding:40px; text-align:center; background:#111; color:#fff; }
-    section { padding:40px; max-width:900px; margin:auto; }
-    h2 { margin-bottom:10px; }
-    .btn { display:inline-block; padding:12px 20px; background:#25D366; color:#fff; text-decoration:none; border-radius:6px; }
-    footer { text-align:center; padding:20px; background:#f2f2f2; }
-    .wa {
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#25D366;
-      color:white;
-      padding:15px 18px;
-      border-radius:50%;
-      font-size:22px;
-      text-decoration:none;
-    }
-  </style>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/wa.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
-<header>
-  <h1>Two Be Wed</h1>
-  <p>Weddings • Events • Celebrations</p>
+<header class="site-header">
+  <div class="header-inner">
+    <nav class="header-nav-left">
+      <a href="#about">About</a>
+      <span class="sep">/</span>
+      <a href="#services">Services</a>
+    </nav>
+    <a href="index.html" class="header-logo">
+      <h1>Two Be Wed</h1>
+      <p class="tagline">Weddings • Events • Celebrations</p>
+    </a>
+    <nav class="header-nav-right">
+      <a href="gallery.html">Gallery</a>
+      <span class="sep">/</span>
+      <a href="#contact">Contact</a>
+      <span class="sep">/</span>
+      <a href="https://www.instagram.com/twobewed.in/?hl=en" target="_blank">Instagram</a>
+    </nav>
+  </div>
 </header>
 
-<section>
-  <h2>About Us</h2>
-  <p>Two Be Wed is a wedding & event brand creating beautiful, memorable celebrations with elegance and love.</p>
+<section class="hero">
+  <div class="hero-img hero-img-left">
+    <img src="images/image1.jpg" alt="Wedding content">
+  </div>
+  <div class="hero-img hero-img-center">
+    <img src="images/image2.avif" alt="Wedding content">
+  </div>
+  <div class="hero-img hero-img-right">
+    <img src="images/image3.jpg" alt="Wedding content">
+  </div>
 </section>
 
-<section>
-  <h2>Our Services</h2>
-  <ul>
-    <li>Wedding BTS</li>
-    <li>Pre-Wedding Events</li>
-    <li>Decor & Styling</li>
-    <li>Special Occasions</li>
-  </ul>
+<section class="slogan-section">
+  <p class="slogan">Let us <span class="script">capture</span> your unique <span class="script">love story.</span></p>
+  <div class="cta-links">
+    <a href="gallery.html">← explore the gallery</a>
+    <span class="sep">|</span>
+    <a href="#about">about us →</a>
+  </div>
 </section>
 
-<section>
-  <h2>Contact</h2>
-  <p>Let’s plan your special day.</p>
+<section class="featured">
+  <div class="featured-header">
+    <h2>Featured Work</h2>
+    <a href="gallery.html">View all →</a>
+  </div>
+  <div class="featured-grid">
+    <a href="gallery.html" class="featured-item"><img src="images/image4.jpeg" alt="Wedding content"></a>
+    <a href="gallery.html" class="featured-item"><img src="images/image5.jpg" alt="Wedding content"></a>
+    <a href="gallery.html" class="featured-item"><img src="images/image6.jpeg" alt="Wedding content"></a>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <h2 class="section-title">About Two Be Wed</h2>
+  <p>At Two Be Wed, our goal is to capture and craft wedding content that truly reflects every emotion, every moment of drama, and the joy of celebration. We ensure that you can instantly relive those special moments with just a tap on your phone, bringing the magic of the day right to your fingertips.</p>
+  <div class="about-quote">
+    <p>We have a question for you:</p>
+    <p>How many times have you re-watched your wedding album?</p>
+    <p class="answer">We know your answer & we got you covered.</p>
+  </div>
+</section>
+
+<section id="services">
+  <h2 class="section-title">Our Services</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Wedding BTS</h3>
+      <p>Behind-the-scenes content that captures the real moments, emotions, and magic of your wedding day.</p>
+    </div>
+    <div class="service-card">
+      <h3>Pre-Wedding Events</h3>
+      <p>Engagement shoots, mehendi, sangeet—we cover it all with content you'll love to revisit.</p>
+    </div>
+    <div class="service-card">
+      <h3>Decor & Styling</h3>
+      <p>Showcase your venue, florals, and styling in content that does justice to your vision.</p>
+    </div>
+    <div class="service-card">
+      <h3>Special Occasions</h3>
+      <p>Anniversaries, baby showers, milestone celebrations—we bring the same care to every event.</p>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <h2 class="section-title">What Couples Say</h2>
+  <div class="testimonial-list">
+    <blockquote class="testimonial">
+      <p>"[Placeholder testimonial – to be updated]"</p>
+      <cite>— Couple Name, Wedding BTS</cite>
+    </blockquote>
+    <blockquote class="testimonial">
+      <p>"[Placeholder testimonial – to be updated]"</p>
+      <cite>— Couple Name, Pre-Wedding</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2 class="section-title">Let's Plan Your Day</h2>
+  <p>Ready to capture your special moments? Get in touch and let's create something beautiful together.</p>
   <a class="btn" href="https://wa.me/919056042090" target="_blank">Chat on WhatsApp</a>
 </section>
 
-<a class="wa" href="https://wa.me/919056042090" target="_blank">💬</a>
-
 <footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="https://www.instagram.com/twobewed.in/?hl=en" target="_blank">Instagram</a>
+  </div>
   © 2026 Two Be Wed
 </footer>
+
+<a class="wa" href="https://wa.me/919056042090" target="_blank" aria-label="WhatsApp">💬</a>
 
 </body>
 </html>
