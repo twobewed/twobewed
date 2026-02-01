@@ -1,4 +1,4 @@
-/* Header - centered logo, split nav */
+/* Header - logo on first line, ALL nav links on one single line below */
 
 header.site-header {
   padding: 24px 16px;
@@ -10,15 +10,27 @@ header.site-header {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column; /* logo row, then nav row */
   align-items: center;
-  gap: 20px;
+  gap: 12px;
 }
 
+/*
+  Merge the two nav blocks visually into ONE row (no HTML change needed).
+  - nav elements become layout containers
+  - their children (links/separators) flow in a single flex row
+*/
 .header-nav-left,
 .header-nav-right {
-  display: flex;
+  display: contents; /* makes links/seps behave like direct children of header-inner */
+}
+
+/* Single nav row */
+.header-inner nav {
+  display: inline-flex;
+  flex-wrap: wrap;         /* wraps neatly on smaller screens */
+  justify-content: center;
+  align-items: center;
   gap: 8px;
   font-size: 0.8rem;
   font-weight: 300;
@@ -27,6 +39,7 @@ header.site-header {
   color: var(--text-muted);
 }
 
+/* Links */
 .header-nav-left a,
 .header-nav-right a {
   color: var(--text-muted);
@@ -41,14 +54,16 @@ header.site-header {
   color: var(--text);
 }
 
+/* Separators */
 .header-nav-left .sep,
 .header-nav-right .sep {
   color: #ccc;
   pointer-events: none;
 }
 
+/* Logo */
 .header-logo {
-  flex: 1;
+  flex: none;
   min-width: 140px;
 }
 
@@ -61,18 +76,11 @@ header.site-header {
 }
 
 .header-logo .tagline {
+  margin: 0;
   font-size: 0.85rem;
   color: var(--text-muted);
   font-family: Georgia, "Times New Roman", serif;
   font-style: italic;
-}
-
-.header-nav-right {
-  justify-content: flex-end;
-}
-
-.header-nav-left {
-  justify-content: flex-start;
 }
 
 @media (max-width: 640px) {
@@ -81,26 +89,10 @@ header.site-header {
   }
 
   .header-inner {
-    flex-direction: column;
-    gap: 16px;
+    gap: 10px;
   }
 
-  .header-logo {
-    order: -1;
-    flex: none;
-  }
-
-  .header-nav-left,
-  .header-nav-right {
+  .header-inner nav {
     justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .header-nav-left {
-    order: 1;
-  }
-
-  .header-nav-right {
-    order: 2;
   }
 }

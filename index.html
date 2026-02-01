@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <title>Two Be Wed | Wedding Content Creators</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
@@ -15,27 +17,29 @@
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <nav class="header-nav-left">
-      <a href="#about">About</a>
-      <span class="sep">/</span>
-      <a href="#services">Services</a>
-    </nav>
-    <a href="index.html" class="header-logo">
-      <h1>Two Be Wed</h1>
-      <p class="tagline">Weddings • Events • Celebrations</p>
-    </a>
-    <nav class="header-nav-right">
-      <a href="gallery.html">Gallery</a>
-      <span class="sep">/</span>
-      <a href="#contact">Contact</a>
-      <span class="sep">/</span>
-      <a href="https://www.instagram.com/twobewed.in/?hl=en" target="_blank">Instagram</a>
-    </nav>
-  </div>
-</header>
-
+  <header class="site-header">
+    <div class="header-inner">
+  
+      <a href="index.html" class="header-logo">
+        <h1>Two Be Wed</h1>
+        <p class="tagline">Weddings • Events • Celebrations</p>
+      </a>
+  
+      <nav class="header-nav">
+        <a href="#about">About</a>
+        <span class="sep">/</span>
+        <a href="#services">Services</a>
+        <span class="sep">/</span>
+        <a href="gallery.html">Gallery</a>
+        <span class="sep">/</span>
+        <a href="#contact">Contact</a>
+        <span class="sep">/</span>
+        <a href="https://www.instagram.com/twobewed.in/?hl=en" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+  
+    </div>
+  </header>
+  
 <section class="hero">
   <div class="hero-img hero-img-left">
     <img src="images/image1.jpg" alt="Wedding content">
@@ -49,7 +53,10 @@
 </section>
 
 <section class="slogan-section">
-  <p class="slogan">Let us <span class="script">capture</span> your unique <span class="script">love story.</span></p>
+  <p class="slogan">
+    Let us <span class="script">capture</span> your unique
+    <span class="script">love story.</span>
+  </p>
   <div class="cta-links">
     <a href="gallery.html">← explore the gallery</a>
     <span class="sep">|</span>
@@ -59,31 +66,52 @@
 
 <section class="featured">
   <div class="reel-overlay" id="reelOverlay" aria-hidden="true"></div>
+
   <div class="featured-header">
     <h2>Featured Work</h2>
-    <a href="https://www.instagram.com/twobewed.in/reels/" target="_blank">View all on Instagram →</a>
+    <a href="https://www.instagram.com/twobewed.in/reels/" target="_blank" rel="noopener">
+      View all on Instagram →
+    </a>
   </div>
+
   <div class="featured-grid">
-    <!-- Replace data-reel-id with your actual Instagram reel IDs (from reel URL: instagram.com/reel/REEL_ID/) -->
-    <div class="featured-item reel-item" data-reel-id="DSSELQfCHsA/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-thumb="images/image4.jpeg">
+    <!-- data-reel-id MUST be only the shortcode -->
+    <div class="featured-item reel-item" data-reel-id="DSSELQfCHsA">
       <img src="images/image4.jpeg" alt="Wedding reel">
       <div class="reel-popup">
         <button class="reel-close" aria-label="Close">×</button>
-        <iframe src="" loading="lazy" allow="autoplay" allowfullscreen></iframe>
+        <iframe
+          src=""
+          loading="lazy"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
-    <div class="featured-item reel-item" data-reel-id="DS4qOv4jLf4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-thumb="images/image5.jpg">
+
+    <div class="featured-item reel-item" data-reel-id="DS4qOv4jLf4">
       <img src="images/image5.jpg" alt="Wedding reel">
       <div class="reel-popup">
         <button class="reel-close" aria-label="Close">×</button>
-        <iframe src="" loading="lazy" allow="autoplay" allowfullscreen></iframe>
+        <iframe
+          src=""
+          loading="lazy"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
-    <div class="featured-item reel-item" data-reel-id="DPV772hiQXN/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-thumb="images/image6.jpeg">
+
+    <div class="featured-item reel-item" data-reel-id="DPV772hiQXN">
       <img src="images/image6.jpeg" alt="Wedding reel">
       <div class="reel-popup">
         <button class="reel-close" aria-label="Close">×</button>
-        <iframe src="" loading="lazy" allow="autoplay" allowfullscreen></iframe>
+        <iframe
+          src=""
+          loading="lazy"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
   </div>
@@ -91,7 +119,13 @@
 
 <section id="about" class="about">
   <h2 class="section-title">About Two Be Wed</h2>
-  <p>At Two Be Wed, our goal is to capture and craft wedding content that truly reflects every emotion, every moment of drama, and the joy of celebration. We ensure that you can instantly relive those special moments with just a tap on your phone, bringing the magic of the day right to your fingertips.</p>
+  <p>
+    At Two Be Wed, our goal is to capture and craft wedding content that truly
+    reflects every emotion, every moment of drama, and the joy of celebration.
+    We ensure that you can instantly relive those special moments with just a
+    tap on your phone.
+  </p>
+
   <div class="about-quote">
     <p>We have a question for you:</p>
     <p>How many times have you re-watched your wedding album?</p>
@@ -104,19 +138,19 @@
   <div class="services-grid">
     <div class="service-card">
       <h3>Wedding BTS</h3>
-      <p>Behind-the-scenes content that captures the real moments, emotions, and magic of your wedding day.</p>
+      <p>Behind-the-scenes content capturing real emotions and moments.</p>
     </div>
     <div class="service-card">
       <h3>Pre-Wedding Events</h3>
-      <p>Engagement shoots, mehendi, sangeet—we cover it all with content you'll love to revisit.</p>
+      <p>Engagements, mehendi, sangeet—beautifully documented.</p>
     </div>
     <div class="service-card">
       <h3>Decor & Styling</h3>
-      <p>Showcase your venue, florals, and styling in content that does justice to your vision.</p>
+      <p>Content that does justice to your vision and details.</p>
     </div>
     <div class="service-card">
       <h3>Special Occasions</h3>
-      <p>Anniversaries, baby showers, milestone celebrations—we bring the same care to every event.</p>
+      <p>Anniversaries, baby showers, milestone celebrations.</p>
     </div>
   </div>
 </section>
@@ -126,82 +160,86 @@
   <div class="testimonial-list">
     <blockquote class="testimonial">
       <p>"[Placeholder testimonial – to be updated]"</p>
-      <cite>— Couple Name, Wedding BTS</cite>
+      <cite>— Couple Name</cite>
     </blockquote>
     <blockquote class="testimonial">
       <p>"[Placeholder testimonial – to be updated]"</p>
-      <cite>— Couple Name, Pre-Wedding</cite>
+      <cite>— Couple Name</cite>
     </blockquote>
   </div>
 </section>
 
 <section id="contact" class="contact">
   <h2 class="section-title">Let's Plan Your Day</h2>
-  <p>Ready to capture your special moments? Get in touch and let's create something beautiful together.</p>
-  <a class="btn" href="https://wa.me/919056042090" target="_blank">Chat on WhatsApp</a>
+  <p>Ready to capture your special moments?</p>
+  <a class="btn" href="https://wa.me/919056042090" target="_blank" rel="noopener">
+    Chat on WhatsApp
+  </a>
 </section>
 
 <footer>
   <div class="footer-links">
     <a href="index.html">Home</a>
     <a href="gallery.html">Gallery</a>
-    <a href="https://www.instagram.com/twobewed.in/?hl=en" target="_blank">Instagram</a>
+    <a href="https://www.instagram.com/twobewed.in/?hl=en" target="_blank" rel="noopener">
+      Instagram
+    </a>
   </div>
   © 2026 Two Be Wed
 </footer>
 
-<a class="wa" href="https://wa.me/919056042090" target="_blank" aria-label="WhatsApp">💬</a>
+<a class="wa" href="https://wa.me/919056042090" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
 
 <script>
-(function() {
-  var items = document.querySelectorAll('.reel-item');
-  var overlay = document.getElementById('reelOverlay');
+(function () {
+  const items = document.querySelectorAll('.reel-item');
+  const overlay = document.getElementById('reelOverlay');
+
+  function buildEmbedUrl(id) {
+    const clean = (id || '')
+      .trim()
+      .replace(/^https?:\/\/www\.instagram\.com\/(reel|reels)\//, '')
+      .replace(/\/.*$/, '');
+    return `https://www.instagram.com/reel/${clean}/embed`;
+  }
 
   function openReel(item) {
-    var popup = item.querySelector('.reel-popup');
-    var iframe = popup.querySelector('iframe');
-    var reelId = item.getAttribute('data-reel-id');
-
-    if (reelId && reelId.indexOf('REEL_ID_') === -1 && !iframe.src) {
-      iframe.src = 'https://www.instagram.com/reel/' + reelId + '/embed/';
-    }
-
+    const popup = item.querySelector('.reel-popup');
+    const iframe = popup.querySelector('iframe');
+    iframe.src = buildEmbedUrl(item.dataset.reelId);
     popup.classList.add('active');
     overlay.classList.add('active');
     overlay.setAttribute('aria-hidden', 'false');
   }
 
   function closeReel() {
-    items.forEach(function(item) {
-      item.querySelector('.reel-popup').classList.remove('active');
+    items.forEach(item => {
+      const popup = item.querySelector('.reel-popup');
+      const iframe = popup.querySelector('iframe');
+      popup.classList.remove('active');
+      iframe.src = '';
     });
     overlay.classList.remove('active');
     overlay.setAttribute('aria-hidden', 'true');
   }
 
-  items.forEach(function(item) {
-    var popup = item.querySelector('.reel-popup');
-    var closeBtn = popup.querySelector('.reel-close');
-
-    item.addEventListener('mouseenter', function() {
-      if (window.matchMedia('(hover: hover)').matches) {
-        openReel(item);
-      }
-    });
-
-    item.addEventListener('click', function(e) {
-      if (window.matchMedia('(hover: hover)').matches) return;
+  items.forEach(item => {
+    const closeBtn = item.querySelector('.reel-close');
+    item.addEventListener('click', e => {
       e.preventDefault();
+      e.stopPropagation();
       openReel(item);
     });
-
-    closeBtn.addEventListener('click', function(e) {
+    closeBtn.addEventListener('click', e => {
       e.stopPropagation();
       closeReel();
     });
   });
 
   overlay.addEventListener('click', closeReel);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeReel();
+  });
 })();
 </script>
 
