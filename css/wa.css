@@ -1,4 +1,4 @@
-/* Floating WhatsApp button - touch-friendly */
+/* Floating WhatsApp button - stays green regardless of theme */
 
 .wa {
   position: fixed;
@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--accent);
+  background: #25D366; /* WhatsApp green — fixed */
   color: #fff;
   border-radius: 50%;
   font-size: 24px;

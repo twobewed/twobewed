@@ -1,34 +1,42 @@
-/* Header - logo on first line, ALL nav links on one single line below */
+/* Header - logo first, nav second (single row) */
 
 header.site-header {
   padding: 24px 16px;
   text-align: center;
   background: var(--bg);
+  border-bottom: 1px solid rgba(200, 169, 106, 0.15); /* soft champagne line */
+  
 }
+
 
 .header-inner {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column; /* logo row, then nav row */
+  flex-direction: column;
   align-items: center;
   gap: 12px;
 }
 
-/*
-  Merge the two nav blocks visually into ONE row (no HTML change needed).
-  - nav elements become layout containers
-  - their children (links/separators) flow in a single flex row
-*/
-.header-nav-left,
-.header-nav-right {
-  display: contents; /* makes links/seps behave like direct children of header-inner */
+.header-logo h1 {
+  margin: 0 0 4px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
 }
 
-/* Single nav row */
-.header-inner nav {
-  display: inline-flex;
-  flex-wrap: wrap;         /* wraps neatly on smaller screens */
+.header-logo .tagline {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+}
+
+.header-nav {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 8px;
@@ -39,9 +47,7 @@ header.site-header {
   color: var(--text-muted);
 }
 
-/* Links */
-.header-nav-left a,
-.header-nav-right a {
+.header-nav a {
   color: var(--text-muted);
   padding: 8px 4px;
   min-height: 44px;
@@ -49,50 +55,18 @@ header.site-header {
   align-items: center;
 }
 
-.header-nav-left a:hover,
-.header-nav-right a:hover {
-  color: var(--text);
+.header-nav a:hover {
+  color: #2B2A28;               /* slightly darker text */
+  background: rgba(233, 183, 179, 0.15);
+  border-radius: 6px;
 }
 
-/* Separators */
-.header-nav-left .sep,
-.header-nav-right .sep {
+.header-nav .sep {
   color: #ccc;
   pointer-events: none;
 }
 
-/* Logo */
-.header-logo {
-  flex: none;
-  min-width: 140px;
-}
-
-.header-logo h1 {
-  margin: 0 0 4px;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.75rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-}
-
-.header-logo .tagline {
-  margin: 0;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  font-family: Georgia, "Times New Roman", serif;
-  font-style: italic;
-}
-
 @media (max-width: 640px) {
-  header.site-header {
-    padding: 20px 16px;
-  }
-
-  .header-inner {
-    gap: 10px;
-  }
-
-  .header-inner nav {
-    justify-content: center;
-  }
+  header.site-header { padding: 20px 16px; }
+  .header-inner { gap: 10px; }
 }

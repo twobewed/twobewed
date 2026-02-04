@@ -1,0 +1,38 @@
+/* Portfolio */
+
+.page-hero {
+    padding: 34px 0 18px;
+    text-align: center;
+  }
+  
+  .page-hero p {
+    margin: 6px 0 0;
+    color: var(--text-muted);
+  }
+  
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-bottom: 60px;
+  }
+  
+  @media (min-width: 700px) {
+    .portfolio-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  }
+  
+  .portfolio-item {
+    aspect-ratio: 1;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #eee;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  

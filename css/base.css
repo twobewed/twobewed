@@ -1,16 +1,21 @@
 /* Base styles - variables, reset, typography */
 
 :root {
-  --bg: #FAF9F7;
-  --bg-alt: #F5F4F2;
-  --text: #2C2C2C;
-  --text-muted: #6B6B6B;
-  --accent: #25D366;
+  --bg: #FBF7F2;
+  --bg-alt: #F3ECE4;
+  --text: #2B2A28;
+  --text-muted: #6F6A64;
+  --accent: #C8A96A;      /* champagne gold */
+  --accent-hover: #E9B7B3;/* soft blush */
+  --card: #ffffff;
+  --border: #e8e8e8;
 }
 
-* {
-  box-sizing: border-box;
-}
+
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
 
 body {
   margin: 0;
@@ -20,7 +25,69 @@ body {
   line-height: 1.6;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+a { color: inherit; text-decoration: none; }
+
+img { max-width: 100%; display: block; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
+
+@media (min-width: 600px) {
+  .container { padding: 0 24px; }
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0 0 18px;
+  letter-spacing: 0.02em;
+}
+
+.muted { color: var(--text-muted); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 18px;
+  min-height: 48px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.95rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--accent-hover);
+  color: #2B2A28; /* keeps text readable on blush */
+  opacity: 1;
+}
+
+
+.btn.secondary {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.btn.secondary:hover {
+  background: rgba(233, 183, 179, 0.18); /* very soft blush wash */
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+a:not(.btn):hover {
+  color: #2B2A28;
+  text-decoration-color: #E9B7B3;
+}
+

@@ -1,0 +1,33 @@
+/* FAQs */
+
+.page-hero {
+    padding: 34px 0 18px;
+    text-align: center;
+  }
+  
+  .page-hero p {
+    margin: 6px 0 0;
+    color: var(--text-muted);
+  }
+  
+  .faq-list {
+    display: grid;
+    gap: 12px;
+    padding: 0 0 60px;
+  }
+  
+  .faq-item {
+    border-radius: 14px;
+    padding: 18px 18px;
+  }
+  
+  .faq-item h3 {
+    margin: 0 0 8px;
+    font-size: 1rem;
+  }
+  
+  .faq-item p {
+    margin: 0;
+    color: var(--text-muted);
+  }
+  

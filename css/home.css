@@ -1,71 +1,37 @@
-/* Home page - hero, slogan, featured, about, services, testimonials, contact */
+/* Home page */
 
-/* Section common */
-section {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 48px 16px;
-}
-
-@media (min-width: 600px) {
-  section {
-    padding: 64px 24px;
-  }
-}
-
-.section-title {
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin: 0 0 24px;
-  letter-spacing: 0.02em;
-}
-
-/* Hero - three image layout (images 1,2,3) */
 .hero {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 16px 32px;
+  padding: 24px 16px 18px;
   display: grid;
   grid-template-columns: 1fr 1.4fr 1fr;
   gap: 12px;
-  align-items: stretch;
 }
 
 .hero-img {
   overflow: hidden;
   background: #eee;
+  border-radius: 14px;
 }
 
 .hero-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
-.hero-img-left,
-.hero-img-right,
-.hero-img-center {
-  aspect-ratio: 3/4;
-}
+.hero-img-left, .hero-img-right, .hero-img-center { aspect-ratio: 3/4; }
 
 @media (max-width: 768px) {
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 0 16px 24px;
-  }
-
-  .hero-img-center {
-    order: -1;
-  }
+  .hero { grid-template-columns: 1fr; gap: 10px; padding: 18px 16px 10px; }
+  .hero-img-center { order: -1; }
 }
 
-/* Slogan section below hero */
 .slogan-section {
   text-align: center;
-  padding: 32px 16px 40px;
-  border-top: 1px solid #e8e8e8;
+  padding: 18px 16px 40px;
+  border-top: 1px solid var(--border);
 }
 
 .slogan-section .slogan {
@@ -73,9 +39,7 @@ section {
   font-weight: 300;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text);
-  margin: 0 0 8px;
-  line-height: 1.5;
+  margin: 0 0 10px;
 }
 
 .slogan-section .slogan .script {
@@ -85,41 +49,65 @@ section {
   letter-spacing: 0;
 }
 
-.slogan-section .cta-links {
-  margin-top: 20px;
-  font-size: 0.85rem;
-  font-weight: 300;
-  color: var(--text-muted);
+.slogan-actions {
   display: flex;
-  flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
-  align-items: center;
-  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 14px;
 }
 
-.slogan-section .cta-links a {
+.section {
+  padding: 56px 0;
+}
+
+.section.alt {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.services-grid {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 700px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.service-card {
+  padding: 24px;
+  border-radius: 14px;
+}
+
+.service-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.service-card p { margin: 0; color: var(--text-muted); }
+
+.split {
+  display: grid;
+  gap: 18px;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .split { grid-template-columns: 1.1fr 0.9fr; gap: 26px; }
+}
+
+.about-box {
+  padding: 24px;
+  border-radius: 14px;
+}
+
+.bullets {
+  margin: 0;
+  padding-left: 18px;
   color: var(--text-muted);
-}
-
-.slogan-section .cta-links a:hover {
-  color: var(--text);
-}
-
-.slogan-section .cta-links .sep {
-  color: #ddd;
-}
-
-/* Featured Work - Instagram reels with hover popup */
-.featured {
-  padding: 32px 16px 48px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-@media (min-width: 600px) {
-  .featured {
-    padding: 48px 24px 64px;
-  }
 }
 
 .featured-header {
@@ -128,23 +116,11 @@ section {
   justify-content: space-between;
   align-items: baseline;
   gap: 12px;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
-.featured-header h2 {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-
-.featured-header a {
-  color: var(--text-muted);
-  font-size: 0.85rem;
-}
-
-.featured-header a:hover {
-  color: var(--text);
-}
+.featured-header a { color: var(--text-muted); }
+.featured-header a:hover { color: var(--text); }
 
 .featured-grid {
   display: grid;
@@ -152,27 +128,43 @@ section {
   gap: 10px;
 }
 
+@media (min-width: 700px) {
+  .featured-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+}
+
 .featured-item {
   aspect-ratio: 1;
-  overflow: visible;
+  border-radius: 14px;
+  overflow: hidden;
   background: #eee;
   position: relative;
   cursor: pointer;
+}
+
+.featured-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .featured-item::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0,0,0,0.20);
   opacity: 0;
   transition: opacity 0.2s;
   pointer-events: none;
 }
 
 .featured-item:hover::after {
-  opacity: 1;
+  opacity: 0.85;
+  background: linear-gradient(
+    rgba(233, 183, 179, 0.25),
+    rgba(0, 0, 0, 0.25)
+  );
 }
+
 
 .featured-item::before {
   content: '▶';
@@ -180,207 +172,88 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 48px;
-  height: 48px;
-  background: rgba(255, 255, 255, 0.9);
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
+  background: rgba(255,255,255,0.92);
   text-align: center;
-  line-height: 48px;
+  line-height: 52px;
   font-size: 18px;
   color: #333;
   opacity: 0;
   transition: opacity 0.2s;
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
 }
 
-.featured-item:hover::before {
-  opacity: 1;
+.featured-item:hover::before { opacity: 1; }
+
+/* Modal */
+.reel-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.62);
+  z-index: 999;
+  display: none;
 }
 
-.featured-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+.reel-overlay.active { display: block; }
 
-/* Reel popup - appears on hover / tap */
-.reel-item .reel-popup {
+.reel-popup {
   display: none;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
-  width: min(90vw, 400px);
-  height: min(80vh, 600px);
-  background: #000;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+
+  /* Match IG embed width better */
+  width: min(92vw, 540px);
+  max-height: 82vh;
+
+  background: transparent;   /* ✅ removes black box background */
+  border-radius: 14px;
+  overflow: visible;         /* embed will manage its own height */
+  box-shadow: 0 22px 60px rgba(0,0,0,0.5);
 }
 
-.reel-item .reel-popup.active {
-  display: block;
-}
 
-.reel-popup iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
+.reel-popup.active { display: block; }
 
 .reel-close {
   position: absolute;
-  top: -40px;
-  right: 0;
-  background: transparent;
-  border: none;
+  top: 10px;
+  right: 10px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(0,0,0,0.55);
   color: #fff;
-  font-size: 28px;
+  font-size: 22px;
   cursor: pointer;
-  padding: 4px 8px;
-  line-height: 1;
-  z-index: 1;
+  z-index: 2;
 }
 
-.reel-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 999;
-  display: none;
+.reel-close:hover { background: rgba(0,0,0,0.75); }
+
+.reel-embed {
+  width: 100%;
+  max-height: 82vh;
+  overflow: auto;
+
+  background: transparent;   /* ✅ removes black space */
+  padding: 0;                /* ✅ remove padding that can create gaps */
+
+  display: flex;             /* ✅ center the embed */
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.reel-overlay.active {
-  display: block;
+/* Force the Instagram embed to use full available width */
+.reel-embed blockquote.instagram-media {
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 540px !important;
 }
 
-@media (min-width: 600px) {
-  .featured-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-}
-
-@media (min-width: 900px) {
-  .featured-grid {
-    gap: 20px;
-  }
-}
-
-/* About */
-.about p {
-  margin: 0 0 20px;
-  color: var(--text-muted);
-  font-size: 1.05rem;
-}
-
-.about-quote {
-  margin: 32px 0 0;
-  padding: 24px 0;
-  border-top: 1px solid #e8e8e8;
-}
-
-.about-quote p {
-  margin: 0;
-  font-size: 1.1rem;
-  color: var(--text);
-  font-style: italic;
-}
-
-.about-quote .answer {
-  margin-top: 12px;
-  font-style: normal;
-  font-weight: 500;
-}
-
-/* Services */
-.services-grid {
-  display: grid;
-  gap: 20px;
-}
-
-@media (min-width: 600px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.service-card {
-  padding: 28px;
-  background: #fff;
-  border: 1px solid #eee;
-}
-
-.service-card h3 {
-  margin: 0 0 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.service-card p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: var(--text-muted);
-}
-
-/* Testimonials */
-.testimonials {
-  background: var(--bg-alt);
-}
-
-.testimonial-list {
-  display: grid;
-  gap: 24px;
-}
-
-.testimonial {
-  padding: 24px;
-  border-left: 3px solid var(--text);
-  background: var(--bg);
-}
-
-.testimonial p {
-  margin: 0 0 12px;
-  font-size: 1rem;
-  color: var(--text);
-}
-
-.testimonial cite {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  font-style: normal;
-}
-
-/* Contact */
-.contact {
-  text-align: center;
-  padding: 48px 16px;
-}
-
-@media (min-width: 600px) {
-  .contact {
-    padding: 80px 24px;
-  }
-}
-
-.contact p {
-  margin: 0 0 24px;
-  color: var(--text-muted);
-  font-size: 1.05rem;
-}
-
-.contact .btn {
-  display: inline-block;
-  padding: 14px 28px;
-  min-height: 48px;
-  line-height: 20px;
-  background: var(--accent);
-  color: #fff;
-  font-size: 0.95rem;
-  border-radius: 6px;
-}
-
-.contact .btn:hover {
-  opacity: 0.95;
-}
