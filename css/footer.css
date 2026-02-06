@@ -36,3 +36,48 @@ footer a:hover {
   justify-content: center;
 }
 
+/* ====== THIN LOGO STRIP ABOVE FOOTER ====== */
+
+/* ====== MATCHING LOGO STRIP ABOVE FOOTER ====== */
+
+.footer-logo-strip{
+  position: relative;
+  width: 100%;
+  height: 36px;
+
+  /* Same champagne base as header */
+  background-color: rgba(200, 169, 106, 0.2);
+
+  /* Repeating wordmark + champagne wash (same as header) */
+  background-image:
+    url("../images/wordmark-strip.png"),
+    linear-gradient(
+      to right,
+      rgba(200, 169, 106, 0.20),
+      rgba(200, 169, 106, 0.20)
+    );
+
+  background-repeat: repeat-x, no-repeat;
+  background-position: center, center;
+  background-size: 120px auto, 100% 100%; /* keep identical to header */
+  animation: stripDrift 34s linear infinite;
+}
+
+/* Soft fade on left & right edges — same as header */
+.footer-logo-strip::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background: linear-gradient(
+    to right,
+    rgba(251, 247, 242, 1) 0%,
+    rgba(251, 247, 242, 0) 14%,
+    rgba(251, 247, 242, 0) 86%,
+    rgba(251, 247, 242, 1) 100%
+  );
+}
+
+
+
+

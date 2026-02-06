@@ -91,3 +91,17 @@ a:not(.btn):hover {
   text-decoration-color: #E9B7B3;
 }
 
+@keyframes stripDrift {
+  from { background-position: 0 center, center; }
+  to   { background-position: 360px center, center; } /* ← reversed */
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .header-logo-strip,
+  .footer-logo-strip {
+    animation: none !important;
+  }
+}
+
+
